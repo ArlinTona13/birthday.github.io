@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Sahabat Seperjuangan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Background elements -->
+<div class="background-elements">
+  <div class="balloon balloon-1"></div>
+  <div class="balloon balloon-2"></div>
+  <div class="balloon balloon-3"></div>
+  <div class="balloon balloon-4"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+</div>
+
+<!-- Birthday Cake -->
+<div class="birthday-cake">
+  <div class="cake">
+    <div class="layer layer-bottom"></div>
+    <div class="layer layer-middle"></div>
+    <div class="layer layer-top"></div>
+    <div class="icing"></div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+  </div>
+</div>
+
+<main class="app">
+
+  <!-- WELCOME SCREEN -->
+  <section class="section welcome active" id="welcome">
+    <div class="content">
+      <h1><i class="fas fa-gift"></i> Ada Surprise Untukmu!</h1>
+      <p>Hai sahabat! Ada pesan spesial yang ingin kusampaikan. Bersediakah kamu membacanya?</p>
+      <div class="welcome-actions">
+        <button onclick="goTo('intro')" class="btn primary pulse">
+          <i class="fas fa-heart"></i> Ya, tentu!
+        </button>
+        <button onclick="playTrick()" class="btn secondary">
+          <i class="fas fa-grin-wink"></i> Tunggu dulu...
+        </button>
+      </div>
+      <p class="hint"><i class="fas fa-lightbulb"></i> Klik "Ya, tentu!" untuk memulai</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section intro" id="intro">
+    <div class="content">
+      <h2><i class="fas fa-hand-peace"></i> Halo Sahabat Seperjuangan!</h2>
+      <p class="intro-text">Sebelum kita lanjut, izinkan saya mengucapkan terima kasih...</p>
+      <div class="message-box">
+        <p>Terima kasih sudah menjadi teman selama masa kuliah. Kita telah melalui suka dan duka bersama, dari begadang ngerjain tugas sampai nongkrong di kantin kampus.</p>
+        <p><i class="fas fa-quote-left"></i> Pertemanan kita adalah salah satu momen paling berharga yang kudapat dari kampus <i class="fas fa-quote-right"></i></p>
+      </div>
+      <button onclick="goTo('question')" class="btn primary">
+        Lanjut <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- QUESTION -->
+  <section class="section question" id="question">
+    <div class="content">
+      <h2><i class="fas fa-question-circle"></i> Pertanyaan Penting</h2>
+      <p class="question-text">
+        Apakah kamu siap melanjutkan ke halaman berikutnya?
+      </p>
+
+      <div class="btn-group">
+        <button class="btn primary" onclick="goTo('gallery')">
+          <i class="fas fa-fire"></i> Siap 100%!
+        </button>
+        <button class="btn secondary" onclick="shakeButton(this)">
+          <i class="fas fa-smile-wink"></i> Masih ragu...
+        </button>
+      </div>
+      <p class="note">Jangan pilih yang kedua ya! <i class="fas fa-grin-tongue-wink"></i></p>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY -->
+  <section class="section gallery-section" id="gallery">
+    <div class="content">
+      <h2><i class="fas fa-images"></i> Galeri Kenangan Kita</h2>
+      <p class="subtitle">Momen-momen indah selama perjuangan kuliah</p>
+
+      <div class="photo-gallery">
+        <div class="gallery-item">
+          <div class="photo-container">
+            <img src="img/1.jpg" alt="Kenangan 1" class="gallery-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-image\'></i><p>Foto 1</p>';">
+          </div>
+          <div class="photo-caption">Wisuda Bersama - Hari bahagia jadi sarjana!</div>
+        </div>
+        
+        <div class="gallery-item">
+          <div class="photo-container">
+            <img src="img/2.jpg" alt="Kenangan 2" class="gallery-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-users\'></i><p>Foto 2</p>';">
+          </div>
+          <div class="photo-caption">Kelompok Bermain Kartu, uno dan tanam saham </div>
+        </div>
+        
+        <div class="gallery-item">
+          <div class="photo-container">
+            <img src="img/3.jpg" alt="Kenangan 3" class="gallery-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-mug-hot\'></i><p>Foto 3</p>';">
+          </div>
+          <div class="photo-caption">Nongkrong Kantin - Tempat curhat dan tertawa</div>
+        </div>
+      </div>
+
+      <button class="btn primary" onclick="goTo('final')">
+        Lanjut ke Kejutan! <i class="fas fa-surprise"></i>
+      </button>
+    </div>
+  </section>
+
+<!-- FINAL BIRTHDAY -->
+<section class="section final" id="final">
+  <div class="content">
+    <!-- UCAPAN SELAMAT ULANG TAHUN (PERTAMA) -->
+    <div class="final-birthday-header">
+      <h1><i class="fas fa-birthday-cake"></i> Selamat Ulang Tahun! <i class="fas fa-birthday-cake"></i></h1>
+      <div class="final-subtitle">Untuk Dirimu</div>
+    </div>
+
+    <!-- FOTO (KEDUA) -->
+    <div class="final-photo-section">
+      <div class="final-photo-container">
+        <img src="img/mulya.JPG" alt="Foto Sahabat" class="final-profile-photo">
+      </div>
+    </div>
+
+    <!-- NAMA DAN INFO ULANG TAHUN (KETIGA) -->
+    <div class="final-info-section">
+      <h2 class="final-birthday-name">
+        <i class="fas fa-crown"></i>
+        MULYA SAFITRI S.KOM
+      </h2>
+      
+      <div class="final-details">
+        <div class="final-detail">
+          <i class="fas fa-calendar-alt"></i>
+          <div>
+            <span class="final-label">Tanggal Ulang Tahun</span>
+            <span class="final-value">27 Desember 2015</span>
+          </div>
+        </div>
+        
+        <div class="final-detail">
+          <i class="fas fa-birthday-cake"></i>
+          <div>
+            <span class="final-label">Ulang Tahun Ke</span>
+            <span class="final-value">26 Tahun</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PESAN UCAPAN (KEEMPAT) -->
+    <div class="final-message-section">
+      <p><i class="fas fa-heart pink"></i> Di hari spesialmu ini, aku ingin mengucapkan...</p>
+      
+      <div class="final-wishes">
+        <div class="final-wish-card">
+         <i class="fas fa-handshake"></i>
+          <h3>Semoga Sukses,Bahagia Dan sehat Selelau</h3>
+          <p>Hari-harimu selalu dipenuhi kebahagiaan dan tawa</p>
+          <p>Meraih semua impian dan cita-cita yang diinginkan</p>
+           <p>Selalu diberikan kesehatan dan semangat yang tak pernah pudar</p>
+        </div>
+      </div>
+
+      <div class="final-quote">
+        <p>Terima kasih sudah menjadi teman seperjuangan di masa kuliah. Perjalanan kita penuh cerita yang takkan terlupakan.</p>
+        <p><i class="fas fa-quote-left"></i> Jangan pernah berhenti bermimpi dan berjuang. Kita pasti bisa mencapai apa pun yang kita inginkan! <i class="fas fa-quote-right"></i></p>
+      </div>
+    </div>
+
+    <div class="final-signature">
+      <p>Ini bukan sekadar ucapan,
+tapi doa dan harapan
+<br><strong>BY</strong></p>
+      <p class="final-signature-name">Arlin Tona</p>
+      <div class="final-social">
+        <button onclick="shareLove()" class="btn small">
+          <i class="fas fa-share-heart"></i> Kirim Sesuatu
+        </button>
+        <button onclick="goTo('welcome')" class="btn small secondary">
+          <i class="fas fa-redo"></i> Lihat Lagi
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+</footer>
+
+<!-- Audio Element (hanya Jamrud) -->
+<audio id="background-music" loop>
+  <source src="audio/Jamrud.mp3" type="audio/mpeg">
+  Browser Anda tidak mendukung elemen audio.
+</audio>
+
+<script src="js/script.js"></script>
+</body>
+</html>
